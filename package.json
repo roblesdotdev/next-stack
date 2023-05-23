@@ -2,11 +2,20 @@
   "name": "henry-stack",
   "version": "0.1.0",
   "private": true,
+  "author": {
+    "name": "Aldo R. Robles"
+  },
   "scripts": {
-    "dev": "next dev",
     "build": "next build",
+    "dev": "next dev",
+    "format": "npm run prettier -- --list-different",
+    "format:write": "npm run prettier -- --write",
+    "lint": "next lint",
+    "prepare": "husky install",
+    "prettier": "prettier --ignore-path .gitignore \"**/*.+(js|jsx|css|ts|tsx)\"",
     "start": "next start",
-    "lint": "next lint"
+    "typecheck": "tsc -b",
+    "validate": "run-s typecheck lint"
   },
   "dependencies": {
     "@types/node": "20.2.3",
@@ -21,5 +30,19 @@
     "react-dom": "18.2.0",
     "tailwindcss": "3.3.2",
     "typescript": "5.0.4"
+  },
+  "devDependencies": {
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-tailwindcss": "^3.12.0",
+    "husky": "^8.0.3",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.8.8",
+    "prettier-plugin-tailwindcss": "^0.3.0"
+  },
+  "engines": {
+    "node": ">=18",
+    "pnpm": ">=8",
+    "yarn": "please-use-pnpm"
   }
 }
