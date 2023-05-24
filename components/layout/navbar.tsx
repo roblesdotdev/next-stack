@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { siteConfig } from '~/config/site'
-import { Button } from '../ui/button'
+import { buttonVariants } from '../ui/button'
 
 export default function Navbar() {
   return (
@@ -15,9 +15,12 @@ export default function Navbar() {
             </Link>
           </li>
           <li className="ml-auto flex items-center gap-2 text-base">
-            <Button size="sm" variant="outline">
+            <Link
+              className={buttonVariants({ size: 'sm', variant: 'outline' })}
+              href="/login"
+            >
               Sign In
-            </Button>
+            </Link>
           </li>
         </ul>
       </nav>

@@ -1,5 +1,6 @@
-import { ArrowRightIcon, GithubIcon } from 'lucide-react'
+import { ArrowRightIcon } from 'lucide-react'
 import { Balancer } from 'react-wrap-balancer'
+import { GithubIcon } from '~/components/icons'
 import { Button } from '~/components/ui/button'
 import { siteConfig } from '~/config/site'
 
