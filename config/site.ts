@@ -5,9 +5,9 @@ export const siteConfig: SiteConfig = {
   title: 'Henry Stack | Next.js starter',
   description:
     'An application built using the new router, server components, and all the latest features of Next.js 13.',
-  url: '',
-  repoUrl: '',
-  theme: '#000',
+  url: 'https://henry-stack.vercel.app',
+  repoUrl: 'https://github.com/roblesdotdev/henry-stack',
+  theme: '#121212',
   author: {
     name: 'Aldo R. Robles',
     url: 'https://linkedin.com/in/robles-ra',

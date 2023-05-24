@@ -4,4 +4,15 @@
 
 :root {
   color-scheme: dark light;
+
+  --canvas-default: 18 18 32;
+  --canvas-muted: 32 32 46;
+
+  --primary: 96 96 254;
+  --on-primary: 255 255 255;
+  --primary-variant: 111 111 254;
+
+  --fg-default: 215 215 219;
+  --fg-emphasis: 253 253 253;
+  --fg-muted: 145 151 158;
 }

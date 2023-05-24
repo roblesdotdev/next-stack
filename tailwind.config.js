@@ -5,18 +5,25 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  future: {
+    hoverOnlyWhenSupported: true,
+  },
   theme: {
     extend: {
       colors: {
+        primary: {
+          DEFAULT: 'rgb(var(--primary) / <alpha-value>)',
+          variant: 'rgb(var(--primary-variant) / <alpha-value>)',
+          fg: 'rgb(var(--on-primary) / <alpha-value>)',
+        },
         canvas: {
-          DEFAULT: '#0e0616',
-          muted: '#1d1b25',
+          DEFAULT: 'rgb(var(--canvas-default) / <alpha-value>)',
+          muted: 'rgb(var(--canvas-muted) / <alpha-value>)',
         },
         fg: {
-          DEFAULT: '#d7d7db',
-          emphasis: '#fdfdfd',
-          // muted: '#868589',
-          muted: 'rgb(145 151 158 / <alpha-value>)',
+          DEFAULT: 'rgb(var(--fg-default) / <alpha-value>)',
+          emphasis: 'rgb(var(--fg-emphasis) / <alpha-value>)',
+          muted: 'rgb(var(--fg-muted) / <alpha-value>)',
         },
       },
     },
