@@ -1,6 +1,6 @@
-import { ArrowRightIcon } from 'lucide-react'
-import { GithubIcon } from 'lucide-react'
+import { ArrowRightIcon, GithubIcon } from 'lucide-react'
 import { Balancer } from 'react-wrap-balancer'
+import { Button } from '~/components/ui/button'
 import { siteConfig } from '~/config/site'
 
 export default function HomePage() {
@@ -30,9 +30,7 @@ export default function HomePage() {
               applications quickly and efficiently.
             </Balancer>
           </p>
-          <button className="rounded-lg border-2 border-primary bg-primary px-6 py-3 font-medium text-primary-fg outline-none ring-primary-variant ring-offset-4 ring-offset-canvas transition hover:bg-primary-variant focus:ring-2">
-            Get Started
-          </button>
+          <Button>Get Started</Button>
         </section>
       </div>
     </main>

@@ -7,5 +7,6 @@ module.exports = {
   rules: {
     /* HERE GOING ESLINT RULES */
     'no-console': 'off',
+    'no-duplicate-imports': 'error',
   },
 }

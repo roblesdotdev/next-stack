@@ -16,6 +16,10 @@ module.exports = {
           variant: 'rgb(var(--primary-variant) / <alpha-value>)',
           fg: 'rgb(var(--on-primary) / <alpha-value>)',
         },
+        secondary: {
+          DEFAULT: 'rgb(var(--secondary) / <alpha-value>)',
+          variant: 'rgb(var(--secondary-variant) / <alpha-value>)',
+        },
         canvas: {
           DEFAULT: 'rgb(var(--canvas-default) / <alpha-value>)',
           muted: 'rgb(var(--canvas-muted) / <alpha-value>)',

@@ -1,7 +1,7 @@
 import clsx from 'clsx'
-import './globals.css'
 import { Inter } from 'next/font/google'
 import { siteConfig } from '~/config/site'
+import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
 

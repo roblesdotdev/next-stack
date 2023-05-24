@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { siteConfig } from '~/config/site'
-import Image from 'next/image'
+import { Button } from '../ui/button'
 
 export default function Navbar() {
   return (
@@ -15,7 +15,9 @@ export default function Navbar() {
             </Link>
           </li>
           <li className="ml-auto flex items-center gap-2 text-base">
-            <button>Login</button>
+            <Button size="sm" variant="outline">
+              Sign In
+            </Button>
           </li>
         </ul>
       </nav>
