@@ -18,6 +18,7 @@
     "validate": "run-s typecheck lint"
   },
   "dependencies": {
+    "@prisma/client": "^4.14.1",
     "@types/node": "20.2.3",
     "@types/react": "18.2.6",
     "@types/react-dom": "18.2.4",
@@ -41,7 +42,8 @@
     "husky": "^8.0.3",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.8.8",
-    "prettier-plugin-tailwindcss": "^0.3.0"
+    "prettier-plugin-tailwindcss": "^0.3.0",
+    "prisma": "^4.14.1"
   },
   "engines": {
     "node": ">=18",
