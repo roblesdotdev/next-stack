@@ -2,6 +2,7 @@
 
 import { siteConfig } from '~/config/site'
 import { Button } from './ui/button'
+import { ArrowRightIcon, GithubIcon } from 'lucide-react'
 
 export function AuthorLink() {
   return (

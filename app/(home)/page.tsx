@@ -12,7 +12,7 @@ export default function HomePage() {
             target="_blank"
             rel="noreferrer"
             href={siteConfig.repoUrl}
-            className="flex h-7 items-center gap-2 whitespace-nowrap rounded-full bg-canvas-muted px-6 text-[13px] hover:opacity-90"
+            className="flex h-7 items-center gap-2 whitespace-nowrap rounded-full bg-canvas-muted px-6 text-[13px] outline-none ring-primary ring-offset-4 ring-offset-canvas hover:opacity-90 focus-visible:ring-2"
           >
             <GithubIcon className="h-4 w-4 " />
             <span>Star on Github</span>
