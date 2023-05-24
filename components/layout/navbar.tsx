@@ -1,8 +1,10 @@
 import Link from 'next/link'
 import { siteConfig } from '~/config/site'
 import { buttonVariants } from '../ui/button'
+import { getCurrentUser } from '~/lib/session'
 
-export default function Navbar() {
+export default async function Navbar() {
+  const user = await getCurrentUser()
   return (
     <header className="sticky inset-x-0 top-0 z-30 flex h-16 w-full flex-col justify-center bg-canvas/5 backdrop-blur">
       <nav>
@@ -17,9 +19,9 @@ export default function Navbar() {
           <li className="ml-auto flex items-center gap-2 text-base">
             <Link
               className={buttonVariants({ size: 'sm', variant: 'outline' })}
-              href="/login"
+              href={!user ? '/login' : '/dashboard'}
             >
-              Sign In
+              {!user ? 'Sign In' : 'My account'}
             </Link>
           </li>
         </ul>
