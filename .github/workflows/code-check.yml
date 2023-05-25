@@ -3,6 +3,8 @@ name: Code check
 on:
   pull_request:
     branches: ['*']
+    paths-ignore:
+      - '**/README.md'
 
 jobs:
   lint:
