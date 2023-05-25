@@ -3,23 +3,27 @@ name: Code check
 on:
   pull_request:
     branches: ['*']
+  paths-ignore:
+    - '**/README.md'
 
 jobs:
   lint:
     runs-on: ubuntu-latest
     name: Lint
     steps:
-      - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
+      - name: 🛑 Cancel Previous Runs
+        uses: styfle/cancel-workflow-action@0.11.0
 
-      - name: Install Node.js
+      - name: ⬇️ Checkout repo
+        uses: actions/checkout@v3
+
+      - name: ⎔ Setup node
         uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 18
 
-      - uses: pnpm/action-setup@v2.2.4
-        name: Install pnpm
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2.2.4
         id: pnpm-install
         with:
           run_install: false
@@ -44,17 +48,19 @@ jobs:
     runs-on: ubuntu-latest
     name: TypeScript
     steps:
-      - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
+      - name: 🛑 Cancel Previous Runs
+        uses: styfle/cancel-workflow-action@0.11.0
 
-      - name: Install Node.js
+      - name: ⬇️ Checkout repo
+        uses: actions/checkout@v3
+
+      - name: ⎔ Setup node
         uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 18
 
-      - uses: pnpm/action-setup@v2.2.4
-        name: Install pnpm
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2.2.4
         id: pnpm-install
         with:
           run_install: false
