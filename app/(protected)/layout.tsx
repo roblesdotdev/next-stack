@@ -1,5 +1,8 @@
+import { signOut } from 'next-auth/react'
 import Link from 'next/link'
 import { redirect } from 'next/navigation'
+import { Avatar, AvatarFallback, AvatarImage } from '~/components/ui/avatar'
+import { buttonVariants } from '~/components/ui/button'
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -8,6 +11,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '~/components/ui/dropdown-menu'
+import UserMenu from '~/components/user-menu'
 import { siteConfig } from '~/config/site'
 import { authOptions } from '~/lib/auth'
 import { getCurrentUser } from '~/lib/session'
@@ -32,16 +36,7 @@ export default async function DashboardLayout({
           <Link href="/" className="flex items-center space-x-2">
             <span className="font-medium">{siteConfig.name}</span>
           </Link>
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <button>User</button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="end">
-              <DropdownMenuLabel>Bar</DropdownMenuLabel>
-              <DropdownMenuSeparator />
-              <DropdownMenuItem>Foo</DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
+          <UserMenu user={user} />
         </div>
       </header>
       <main className="mx-auto w-full max-w-7xl p-6">{children}</main>
