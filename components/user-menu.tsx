@@ -23,7 +23,7 @@ export default function UserMenu({ user }: UserMenuProps) {
       <DropdownMenuTrigger className="rounded-full outline-none ring-primary ring-offset-2 ring-offset-canvas focus-visible:ring-2">
         <Avatar>
           <AvatarImage src={user.image as string} />
-          <AvatarFallback>RD</AvatarFallback>
+          <AvatarFallback>{user.name?.charAt(0).toUpperCase()}</AvatarFallback>
         </Avatar>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
