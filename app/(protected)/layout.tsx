@@ -1,16 +1,5 @@
-import { signOut } from 'next-auth/react'
 import Link from 'next/link'
 import { redirect } from 'next/navigation'
-import { Avatar, AvatarFallback, AvatarImage } from '~/components/ui/avatar'
-import { buttonVariants } from '~/components/ui/button'
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from '~/components/ui/dropdown-menu'
 import UserMenu from '~/components/user-menu'
 import { siteConfig } from '~/config/site'
 import { authOptions } from '~/lib/auth'

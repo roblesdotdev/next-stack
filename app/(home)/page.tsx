@@ -1,7 +1,8 @@
 import { ArrowRightIcon } from 'lucide-react'
+import Link from 'next/link'
 import { Balancer } from 'react-wrap-balancer'
 import { GithubIcon } from '~/components/icons'
-import { Button } from '~/components/ui/button'
+import { buttonVariants } from '~/components/ui/button'
 import { siteConfig } from '~/config/site'
 
 export default function HomePage() {
@@ -21,17 +22,19 @@ export default function HomePage() {
               <ArrowRightIcon className="h-3 w-3" />
             </span>
           </a>
-          <h1 className="my-2 max-w-3xl text-center text-4xl font-medium delay-[0.15s] md:text-7xl">
+          <h1 className="my-2 max-w-3xl text-center text-4xl font-medium md:text-7xl">
             <Balancer>Take your projects to the next level</Balancer>
           </h1>
-          <p className="mb-6 max-w-3xl text-center text-fg-muted delay-[0.25s] md:text-xl">
+          <p className="mb-6 max-w-3xl text-center text-fg-muted md:text-xl">
             <Balancer>
               Simplify your development process and create{' '}
               <span className="whitespace-nowrap">high-quality</span> web
               applications quickly and efficiently.
             </Balancer>
           </p>
-          <Button>Get Started</Button>
+          <Link href="/dashboard" className={buttonVariants()}>
+            Get Started
+          </Link>
         </section>
       </div>
     </main>
