@@ -22,27 +22,13 @@ jobs:
         with:
           node-version: 18
 
-      - name: Install pnpm
-        uses: pnpm/action-setup@v2.2.4
-        id: pnpm-install
+      - name: 📥 Download deps
+        uses: bahmutov/npm-install@v1
         with:
-          run_install: false
+          useLockFile: false
 
-      - name: Get pnpm store directory
-        id: pnpm-cache
-        run: |
-          echo "pnpm_cache_dir=$(pnpm store path)" >> $GITHUB_OUTPUT
-      - uses: actions/cache@v3
-        name: Setup pnpm cache
-        with:
-          path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-pnpm-store-
-      - name: Install dependencies
-        run: pnpm install
-
-      - run: pnpm lint
+      - name: 🔬 Lint
+        run: npm run lint
 
   tsc:
     runs-on: ubuntu-latest
@@ -59,24 +45,10 @@ jobs:
         with:
           node-version: 18
 
-      - name: Install pnpm
-        uses: pnpm/action-setup@v2.2.4
-        id: pnpm-install
+      - name: 📥 Download deps
+        uses: bahmutov/npm-install@v1
         with:
-          run_install: false
+          useLockFile: false
 
-      - name: Get pnpm store directory
-        id: pnpm-cache
-        run: |
-          echo "pnpm_cache_dir=$(pnpm store path)" >> $GITHUB_OUTPUT
-      - uses: actions/cache@v3
-        name: Setup pnpm cache
-        with:
-          path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-pnpm-store-
-      - name: Install dependencies
-        run: pnpm install
-
-      - run: pnpm typecheck
+      - name: 🔎 Type check
+        run: npm run typecheck --if-present
