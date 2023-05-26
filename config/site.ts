@@ -13,3 +13,6 @@ export const siteConfig: SiteConfig = {
     url: 'https://linkedin.com/in/robles-ra',
   },
 }
+
+export const VERCEL_DEPLOY_URL =
+  'https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Froblesdotdev%2Fhenry-stack&env=NEXTAUTH_SECRET,GITHUB_CLIENT_ID,GITHUB_CLIENT_SECRET&project-name=henry-next-project&repository-name=henry-next-project&demo-title=Henry%20Stack&demo-description=Next.js%20starter%20template&demo-url=https%3A%2F%2Fhenry-stack.vercel.app/&stores=%5B%7B%22type%22%3A%22postgres%22%7D%5D&'

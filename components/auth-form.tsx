@@ -11,7 +11,7 @@ export default function AuthForm() {
   return (
     <div className="mt-8 flex w-full max-w-sm flex-col gap-3">
       <Button
-        variant="outline"
+        variant="secondary"
         disabled={isLoading}
         onClick={() => {
           setIsLoading(true)

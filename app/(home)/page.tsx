@@ -8,9 +8,10 @@ import {
   PrismaIcon,
   TailwindIcon,
   TypescriptIcon,
+  VercelIcon,
 } from '~/components/icons'
 import { buttonVariants } from '~/components/ui/button'
-import { siteConfig } from '~/config/site'
+import { VERCEL_DEPLOY_URL, siteConfig } from '~/config/site'
 
 export default function HomePage() {
   return (
@@ -72,6 +73,34 @@ export default function HomePage() {
                 </h2>
               </div>
             ))}
+          </div>
+        </section>
+
+        <section className="mt-16 pb-8 md:mt-32">
+          <p className="mx-auto text-center text-fg-muted md:max-w-xl md:text-lg lg:mb-8 lg:text-xl">
+            The code can be found on{' '}
+            <a
+              className="font-medium text-fg/80 transition hover:text-fg hover:underline"
+              href={siteConfig.repoUrl}
+              target="_blank"
+              rel="noreferrer"
+            >
+              github
+            </a>
+            , or you can deploy your own instance on Vercel with just one click.
+          </p>
+          <div className="flex items-center justify-center pt-8 lg:pt-0">
+            <a
+              className={buttonVariants({ variant: 'secondary' })}
+              href={VERCEL_DEPLOY_URL}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <div className="flex items-center gap-2">
+                <VercelIcon className="h-4 w-4" />
+                <span>Deploy to vercel</span>
+              </div>
+            </a>
           </div>
         </section>
       </div>
