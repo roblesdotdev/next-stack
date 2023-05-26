@@ -1,0 +1,9 @@
+{
+  "installCommand": "pnpm install",
+  "buildCommand": "pnpm build",
+  "devCommand": "pnpm dev",
+  "github": {
+    "silent": true,
+    "autoJobCancelation": true
+  }
+}
