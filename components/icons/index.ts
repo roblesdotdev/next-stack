@@ -1,1 +1,6 @@
 export { default as GithubIcon } from './github'
+export { default as NextJSIcon } from './nextjs'
+export { default as TypescriptIcon } from './typescript'
+export { default as PrismaIcon } from './prisma'
+export { default as TailwindIcon } from './tailwind'
+export { default as EslintIcon } from './eslint'
