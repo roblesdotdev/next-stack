@@ -2,12 +2,14 @@
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
 generator client {
-  provider = "prisma-client-js"
+  provider        = "prisma-client-js"
+  previewFeatures = ["jsonProtocol"]
 }
 
 datasource db {
-  provider = "sqlite"
-  url      = env("DATABASE_URL")
+  provider          = "postgresql"
+  url               = env("POSTGRES_PRISMA_URL") // uses connection pooling
+  shadowDatabaseUrl = env("POSTGRES_URL_NON_POOLING") // used for migrations
 }
 
 model Account {
@@ -16,12 +18,12 @@ model Account {
   type              String
   provider          String
   providerAccountId String
-  refresh_token     String?
-  access_token      String?
+  refresh_token     String?  @db.Text
+  access_token      String?  @db.Text
   expires_at        Int?
   token_type        String?
   scope             String?
-  id_token          String?
+  id_token          String?  @db.Text
   session_state     String?
   createdAt         DateTime @default(now()) @map(name: "created_at")
   updatedAt         DateTime @default(now()) @map(name: "updated_at")
