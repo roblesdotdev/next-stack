@@ -6,8 +6,12 @@
     "name": "Aldo R. Robles"
   },
   "scripts": {
-    "build": "next build",
-    "dev": "next dev",
+    "db:generate": "prisma generate",
+    "db:push": "prisma db push",
+    "build:next": "next build",
+    "build": "run-s db:* build:*",
+    "dev:next": "next dev",
+    "dev": "run-s db:generate dev:next",
     "format": "npm run prettier -- --list-different",
     "format:write": "npm run prettier -- --write",
     "lint": "next lint",
