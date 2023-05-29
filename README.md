@@ -14,12 +14,19 @@ and the implementation of [advanced routing patterns](https://nextjs.org/docs/ap
 - [x] [GitHub Actions](https://github.com/features/actions) for validate code.
 - [ ] End-to-end testing with [Playwright](https://playwright.dev/)
 
+### Requirements
+
+- [Node >= 18](https://nodejs.org/en)
+- [PNPM >= 8](https://pnpm.io/)
+
+
 ### Getting Started
 
-1. Clone this repository
-2. Install the dependencies: `pnpm install`
-3. Copy the `.env-sample` to `.env` with your environment variables.
-4. Run the development mode: `pnpm dev`
+1. Use this template
+2. Clone your new repository
+3. Install the dependencies: `pnpm install`
+4. Copy the `.env-sample` to `.env` with your environment variables.
+5. Run the development mode: `pnpm dev`
 
 ### One click deploy
 
