@@ -1,4 +1,4 @@
-**Henry Stack** is a Next.js starter template. The goal of this project is to explore 
+**Next Stack** is a Next.js starter template. The goal of this project is to explore 
 the new features of Next.js 13, focusing on the use of [app dir](https://nextjs.org/docs/app/api-reference/next-config-js/appDir) 
 and the implementation of [advanced routing patterns](https://nextjs.org/docs/app/building-your-application/routing#advanced-routing-patterns).
 
